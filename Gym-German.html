@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="de"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Deutsch im Gym Quiz&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body, html {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #f2f2f2;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.start-screen, .question-screen, .result-screen {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-size: cover;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-position: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.start-screen {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-image: url('https://res.cloudinary.com/dgk2pnahd/image/upload/v1744492761/Titelbild_igabvu.png');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.start-screen h1 {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-shadow: 2px 2px 4px #000;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 0.9em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #007bff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #0056b3;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.question-screen {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-size: cover;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-position: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: flex-start; /* Bild &amp; Buttons weiter oben */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 40px 20px 20px; /* oben mehr Abstand */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.question-screen img {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-height: 40vh; /* Bild nicht zu hoch */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 25px; /* mehr Abstand zu den Buttons */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.answers {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.answers button {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 8px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 0.85em;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.result-screen h2 {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.result-screen p {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (min-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.start-screen h1 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 15px 30px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.question-screen img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 500px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="start-screen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Teste dein Gym-Deutsch!&lt;br&gt;A1 oder C1?&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="startQuiz()"&gt;Starte das Bilderquiz!&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="question-screen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img id="quiz-image" src="" alt="Quiz Bild"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="answers" id="answer-buttons"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="result-screen" style="background-image: url(</p>
+<p class="p1">'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744547137/Bildschirmfoto_2025-04-13_um_14.24.47_dfsvx4.png'); background-size: cover;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2 id="score-text"&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Check meine Seite aus und folge mir auf Instagram.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Button zu Website --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="https://jazzupyourgerman.com" target="_blank"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button style="margin: 10px;"&gt;Zur Website&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Instagram Icon als Button --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="https://www.instagram.com/jazzupyourgerman/" target="_blank"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 40px; height: 40px; margin-top: 10px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const questions = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490986/wegra%CC%88umen_qcdha6.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['essen', 'ausräumen', 'wegräumen', 'aufräumen'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 2</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490985/dem_lyukcr.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['dem', 'der', 'das', 'ein'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 0</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490984/Sa%CC%88tze_wpvlid.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['Sätzen', 'Sätze', 'Hantel', 'Hanteln'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 1</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490985/Mitgliedschaft_zweni2.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['Mitgliedschaft', 'Abonnement', 'Isolationsübung', 'Supplement'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 0</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490985/Klimmzu%CC%88ge_e1skzq.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['Liegestütze', 'Klimmzüge', 'Sit-ups', 'Joggen'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 1</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490984/aufbauen_rbqgxf.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['zerstören', 'erhöhen', 'aufbauen', 'größer werden'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 2</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490986/abwechseln_shjlco.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['stärker werden', 'spotten', 'abwechseln', 'trainieren'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 2</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490986/freie_Gewichte_i9gd4n.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['Gewichten', 'Geräten', 'Getränken', 'Handtüchern'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 0</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490985/runternehmen_anh80m.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['runternehmen', 'abnehmen', 'klein machen', 'weniger machen'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 0</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490987/Muskelkater_sikbb3.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['Muskelkalter', 'Rückenschmerzen', 'Kater', 'Bizeps'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 0</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490985/benutze_iwumis.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['trainiere', 'hebe', 'benutze', 'arbeite'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 2</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>image: 'https://res.cloudinary.com/dgk2pnahd/image/upload/v1744490986/Schulterdru%CC%88cken_kkanvs.png',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>options: ['Latziehen', 'Liegestütze', 'Kniebeugen', 'Schulterdrücken'],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>correct: 3</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentQuestion = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let score = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function startQuiz() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelector('.start-screen').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelector('.question-screen').style.display = 'flex';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>showQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showQuestion() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const q = questions[currentQuestion];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('quiz-image').src = q.image;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const answerButtons = document.getElementById('answer-buttons');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>answerButtons.innerHTML = '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>q.options.forEach((option, index) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const btn = document.createElement('button');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>btn.textContent = option;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>btn.onclick = () =&gt; handleAnswer(index);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>answerButtons.appendChild(btn);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function handleAnswer(index) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (index === questions[currentQuestion].correct) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>score++;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>currentQuestion++;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (currentQuestion &lt; questions.length) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showResult();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showResult() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelector('.question-screen').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const resultScreen = document.querySelector('.result-screen');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>resultScreen.style.display = 'flex';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let resultText = '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (score &gt;= 9) resultText = 'Super!';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>else if (score &gt;= 6) resultText = 'Gut!';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>else if (score &gt;= 4) resultText = 'Nicht schlecht!';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>else if (score &gt;= 2) resultText = 'Ausbaufähig!';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>else resultText = 'Kein Problem, Übung macht den Meister!';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('score-text').textContent = `${resultText} (${score} von ${questions.length})`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
